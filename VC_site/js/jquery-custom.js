@@ -1,30 +1,33 @@
 ﻿$(document).ready(function () {
-
+var $contwrap = $(".cont-wrap");
 //hrefs
-$('#profile').click(function () {
-
- $(".cont-wrap").fadeOut(500,function(){
+$('#profile').click(function (e) {
+e.preventDefault();
+ $contwrap.fadeOut(300,function(){
 
     $.ajax({
         url: "http://localhost:3000/profile.html",
         success: function (html) {
 
-           $(".cont-wrap").html(html);
-           $(".cont-wrap").slideDown(300);
+           $contwrap.html(html).fadeIn(400);
+           TweenMax.fromTo($('h1,h2,.profile > p'),0.5,{x:200},{x:0, ease: Back.easeOut.config(1)});
+           TweenMax.fromTo($('.step-light,.step-bold'),0.8,{x:-200},{x:0, ease: Back.easeOut.config(1)},0.3);
+           TweenMax.staggerFrom($('.b-info'),0.5,{opacity:0, scale:0} ,0.05);
        }
    });
 });
 });
 
-$('#resume').click(function () {
-
- $(".cont-wrap").fadeOut('fast',function(){
+$('#resume').click(function (e) {
+    e.preventDefault();
+ $contwrap.fadeOut(300,function(){
     $.ajax({
         url: "http://localhost:3000/resume.html",
         success: function (html) {
 
-           $(".cont-wrap").html(html);
-           $(".cont-wrap").slideDown(500);
+           $contwrap.html(html);
+           $contwrap.fadeIn(300);
+
        }
    });
      $(document).ajaxComplete(function(){
@@ -50,22 +53,24 @@ $('#resume').click(function () {
 });
 });
 
-$('#portfolio').click(function () {
+$('#portfolio').click(function (e) {
+    e.preventDefault();
     $.ajax({
         url: "http://localhost:3000/portfolio.html",
         success: function (html) {
-            $(".cont-wrap").html(html);
+            $contwrap.html(html);
             $('html, body').animate({
                 scrollTop: 0
             }, 500);
         }
     });
 });
-$('#contacts').click(function () {
+$('#contacts').click(function (e) {
+    e.preventDefault();
     $.ajax({
         url: "http://localhost:3000/contacts.html",
         success: function (html) {
-            $(".cont-wrap").html(html);
+            $contwrap.html(html);
             $('html, body').animate({
                 scrollTop: 0
             }, 500);
