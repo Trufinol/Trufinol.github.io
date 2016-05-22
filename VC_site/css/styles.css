@@ -269,13 +269,13 @@ ul.duties li {
 	margin: 8px 0;
 }
 
-#progress-1 {
+.progress {
 	background-color: #e6e6e6;
 	height: 20px;
 	position: relative;
 }
 
-#bar-1 {
+.bar {
 	background-color: #D25B4F;
 	position: absolute;
 	width: 1%;
@@ -284,6 +284,21 @@ ul.duties li {
 
 .space {
 	margin: 20px 0;
+}
+
+.skill {
+	float: left;
+	width: 45%;
+}
+
+.skill:nth-child(odd) {
+margin-right: 3%;
+}
+
+.row {
+	content: '';
+	clear: both;
+	display: table;
 }
 
 /*----------- PORTFOLIO -----------*/
