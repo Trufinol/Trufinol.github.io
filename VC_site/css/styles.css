@@ -269,11 +269,11 @@ ul.duties li {
 	margin: 8px 0;
 }
 
-<<<<<<< HEAD
+
 .progress {
-=======
+
 #progress {
->>>>>>> refs/heads/resume
+
 	background-color: #e6e6e6;
 	height: 20px;
 	position: relative;
@@ -290,20 +290,17 @@ ul.duties li {
 	margin: 20px 0;
 }
 
-<<<<<<< HEAD
-=======
+
 .row:after {
 content:'';
 clear: both;
 display: table;
 }
 
->>>>>>> refs/heads/resume
 .skill {
 	float: left;
 	width: 45%;
 }
-<<<<<<< HEAD
 
 .skill:nth-child(odd) {
 margin-right: 3%;
@@ -315,11 +312,10 @@ margin-right: 3%;
 	display: table;
 }
 
-=======
 .skill:nth-child(odd) {
 	margin-right: 3%;
 }
->>>>>>> refs/heads/resume
+
 /*----------- PORTFOLIO -----------*/
 
 .portfolio h1 {
