@@ -1,6 +1,38 @@
 ﻿$(document).ready(function () {
 
- $(document).ajaxComplete(function(){
+//hrefs
+$('#profile').click(function () {
+    
+ $(".cont-wrap").slideUp(500,function(){
+    $('body').scroll(function(event) {
+    event.preventDefault();
+    console.log(event);
+    });
+    $.ajax({
+        url: "http://localhost:3000/profile.html",
+        success: function (html) {
+
+           $(".cont-wrap").html(html);
+           $(".cont-wrap").slideDown(300);
+       }
+   });
+});
+});
+
+$('#resume').click(function () {
+$('body').on('scroll', function(event) {
+    event.preventDefault();
+});
+ $(".cont-wrap").fadeOut('fast',function(){
+    $.ajax({
+        url: "http://localhost:3000/resume.html",
+        success: function (html) {
+
+           $(".cont-wrap").html(html);
+           $(".cont-wrap").slideDown(300);
+       }
+   });
+     $(document).ajaxComplete(function(){
 
     function barAnimate(id) {
 
@@ -20,30 +52,6 @@
     barAnimate($('#bar-3'));
     barAnimate($('#bar-4'));
 });
-
-//hrefs
-$('#profile').click(function () {
- $(".cont-wrap").fadeOut('fast',function(){
-    $.ajax({
-        url: "http://localhost:3000/profile.html",
-        success: function (html) {
-           $(".cont-wrap").html(html);
-           $(".cont-wrap").fadeIn('fast');
-       }
-   });
-});
-});
-
-$('#resume').click(function () {
-
- $(".cont-wrap").fadeOut('fast',function(){
-    $.ajax({
-        url: "http://localhost:3000/resume.html",
-        success: function (html) {
-           $(".cont-wrap").html(html);
-           $(".cont-wrap").fadeIn('fast');
-       }
-   });
 });
 });
 
