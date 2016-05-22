@@ -2,12 +2,9 @@
 
 //hrefs
 $('#profile').click(function () {
-    
- $(".cont-wrap").slideUp(500,function(){
-    $('body').scroll(function(event) {
-    event.preventDefault();
-    console.log(event);
-    });
+
+ $(".cont-wrap").fadeOut(500,function(){
+
     $.ajax({
         url: "http://localhost:3000/profile.html",
         success: function (html) {
@@ -20,16 +17,14 @@ $('#profile').click(function () {
 });
 
 $('#resume').click(function () {
-$('body').on('scroll', function(event) {
-    event.preventDefault();
-});
+
  $(".cont-wrap").fadeOut('fast',function(){
     $.ajax({
         url: "http://localhost:3000/resume.html",
         success: function (html) {
 
            $(".cont-wrap").html(html);
-           $(".cont-wrap").slideDown(300);
+           $(".cont-wrap").slideDown(500);
        }
    });
      $(document).ajaxComplete(function(){

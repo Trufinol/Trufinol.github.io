@@ -108,7 +108,7 @@ ul {
 	width: 70%;
 	background-color: #fefefe;
 	float: left;
-	    min-height: 591.84px;
+	min-height: 591.84px;
 }
 .cont-wrap {
 	padding: 20px 20px 30px;
@@ -307,8 +307,8 @@ ul.duties li {
 }
 
 .skill > p:first-child {
-font-weight: bold;
-text-align: center;
+	font-weight: bold;
+	text-align: center;
 }
 
 .skill:nth-child(odd) {
@@ -391,19 +391,16 @@ input[type="submit"] {
 	border:none;
 	text-transform: uppercase;
 	cursor:pointer;
-    // -webkit-transition: all 0.1s;
-    // -moz-transition: all 0.1s;
-    // transition: all 0.1s;
-    box-shadow: 0 4px #ab3c3c;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
   }
 
   input[type="submit"]:hover {
-  	box-shadow: 0 2px #ab3c3c;
-  	top: 2px;
+  	background-color: #C7584D;
   }
 
   input[type="submit"]:active {
-  	box-shadow: 0 0 #ab3c3c;
-  	top: 4px;
+  	box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.3); 
   }
 
