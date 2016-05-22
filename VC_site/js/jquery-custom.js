@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-   $(document).ajaxComplete(function(){
+ $(document).ajaxComplete(function(){
 
     function barAnimate(id) {
 
@@ -20,26 +20,33 @@
     barAnimate($('#bar-3'));
     barAnimate($('#bar-4'));
 });
+
 //hrefs
 $('#profile').click(function () {
+ $(".cont-wrap").fadeOut('fast',function(){
     $.ajax({
         url: "http://localhost:3000/profile.html",
         success: function (html) {
-            $(".cont-wrap").html(html);
-        }
-    });
+           $(".cont-wrap").html(html);
+           $(".cont-wrap").fadeIn('fast');
+       }
+   });
 });
+});
+
 $('#resume').click(function () {
+
+ $(".cont-wrap").fadeOut('fast',function(){
     $.ajax({
         url: "http://localhost:3000/resume.html",
         success: function (html) {
-            $(".cont-wrap").html(html);
-            $('html, body').animate({
-                scrollTop: 0
-            }, 500);
-        }
-    });
+           $(".cont-wrap").html(html);
+           $(".cont-wrap").fadeIn('fast');
+       }
+   });
 });
+});
+
 $('#portfolio').click(function () {
     $.ajax({
         url: "http://localhost:3000/portfolio.html",
@@ -62,20 +69,5 @@ $('#contacts').click(function () {
         }
     });
 });
-
-//bars
-
-// var bar1 = $('#bar-1').data('value');
-// TweenMax.to($('#bar-1'),1,{width:bar1+'%',ease: Circ.easeIn});
-// function perc() {
-//     var progr = $('.progress').css('width');
-//     var length =  $('#bar-1').css('width'),
-//     perc = Math.round((parseInt(length)/parseInt(progr))*100);
-//     $('#bar-1').text(perc+'%');
-// }
-// perc();
-// setInterval(perc, 50);
-// });
-
 
 });

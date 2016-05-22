@@ -15,7 +15,7 @@ a {
 
 .wrapper {
 	width: 980px;
-	margin: 100px auto;
+	margin: 50px auto;
 }
 
 /*----------- SIDEBAR -----------*/
@@ -108,6 +108,7 @@ ul {
 	width: 70%;
 	background-color: #fefefe;
 	float: left;
+	    min-height: 591.84px;
 }
 .cont-wrap {
 	padding: 20px 20px 30px;
@@ -156,11 +157,7 @@ h2 {
 	border-bottom: 1px solid #c6c6c6;
 }
 
-.pers-info {
-
-}
-
-.pers-info li {
+.profile li {
 	margin: 0 20px 20px 0;
 	float: left;
 	width: 45%;
@@ -287,6 +284,7 @@ ul.duties li {
 	background-color: #D25B4F;
 	position: absolute;
 	width: 1%;
+	padding-right: 5px;
 	height: 100%;
 	color: #fff;
 	text-align: right;
@@ -308,11 +306,16 @@ ul.duties li {
 	width: 45%;
 }
 
+.skill > p:first-child {
+font-weight: bold;
+text-align: center;
+}
+
 .skill:nth-child(odd) {
 	margin-right: 3%;
 }
 
-.row {
+.row:after {
 	content: '';
 	clear: both;
 	display: table;
