@@ -10,6 +10,7 @@ body {
 
 a {
 	text-decoration: none;
+	outline: none;
 }
 
 .wrapper {
@@ -280,6 +281,9 @@ ul.duties li {
 	position: absolute;
 	width: 1%;
 	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 14px;
 }
 
 .space {
