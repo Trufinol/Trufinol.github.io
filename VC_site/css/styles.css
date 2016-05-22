@@ -269,11 +269,7 @@ ul.duties li {
 	margin: 8px 0;
 }
 
-
 .progress {
-
-#progress {
-
 	background-color: #e6e6e6;
 	height: 20px;
 	position: relative;
@@ -289,7 +285,6 @@ ul.duties li {
 .space {
 	margin: 20px 0;
 }
-
 
 .row:after {
 content:'';
