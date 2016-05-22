@@ -163,18 +163,25 @@ h2 {
 .pers-info li {
 	margin: 0 20px 20px 0;
 	float: left;
-
+	width: 45%;
 }
 
 .b-info {
 	float: left;
 	font-size: 16px;
 	border: 1px solid #c6c6c6;
+	width: 100%;
 }
 
 .b-info > div:first-child{
 	border-right: inherit;
 	background-color: #f1f1f1;
+	width: 35%;
+}
+
+.b-info > div:last-child {
+	text-align: center;
+	width: 65%;
 }
 
 .b-info > div {
@@ -291,9 +298,9 @@ ul.duties li {
 }
 
 .row:after {
-content:'';
-clear: both;
-display: table;
+	content:'';
+	clear: both;
+	display: table;
 }
 
 .skill {
@@ -302,7 +309,7 @@ display: table;
 }
 
 .skill:nth-child(odd) {
-margin-right: 3%;
+	margin-right: 3%;
 }
 
 .row {
