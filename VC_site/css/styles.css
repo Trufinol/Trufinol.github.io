@@ -113,6 +113,7 @@ ul {
 .cont-wrap {
 	padding: 20px 20px 0;
 	overflow-x: hidden;
+    visibility:hidden;
 }
 
 
