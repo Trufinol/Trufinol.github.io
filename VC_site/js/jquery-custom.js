@@ -1,16 +1,19 @@
 ﻿$(function () {
-
+    var $preloader = $('#preloader');
     var $content = $(".content");
     var $contwrap = $('.cont-wrap');
-    $contwrap.css('visibility', 'visible');
+    $preloader.fadeOut(200);
+
     function profAnim() {
+        $contwrap.css('visibility', 'visible');
         $content.fadeIn(400);
         TweenMax.fromTo($('h1,h2,.profile > p'), 0.8, { x: 200 }, { x: 0, ease: Back.easeOut.config(1) });
         TweenMax.fromTo($('.step-light,.step-bold'), 0.8, { x: -200 }, { x: 0, ease: Back.easeOut.config(1) }, 0.3);
         TweenMax.staggerFrom($('.b-info'), 0.6, { opacity: 0, scale: 0 }, 0.08);
+
     };
 
-    profAnim();
+    setTimeout(profAnim(), 5000);
 
     //hrefs
     $('#profile').click(function (e) {
@@ -72,7 +75,15 @@
                     barAnimate($('#bar-3'));
                     barAnimate($('#bar-4'));
                 }
+
+                function educAnimate(id) {
+
+                    TweenMax.fromTo(id, 0.5, { x: -800 }, { x: 0, ease: Sine.easeOut }, 0.3);
+
+                }
+                educAnimate($('.topic, h2'));
             });
+
         });
     });
 
