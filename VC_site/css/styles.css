@@ -3,18 +3,30 @@ body {
 	padding: 0;
 	background-color: #d9dbdd;
 	font-family: 'Lato', sans-serif;
-
+	overflow-y: scroll;
 }
 
 * {	box-sizing: border-box;}
 
 a {
 	text-decoration: none;
+	outline: none;
 }
 
 .wrapper {
 	width: 980px;
-	margin: 100px auto;
+	margin: 50px auto;
+}
+
+#preloader {
+    position: absolute;
+    top: 40%;
+    width: 125px;
+    height: 125px;
+    left: 38%;
+    background-image: url('../images/ripple.svg');
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*----------- SIDEBAR -----------*/
@@ -107,9 +119,13 @@ ul {
 	width: 70%;
 	background-color: #fefefe;
 	float: left;
+	min-height: 470px;
+    position: relative;
 }
 .cont-wrap {
-	padding: 20px 20px 30px;
+	padding: 20px 20px 0;
+	overflow-x: hidden;
+    visibility:hidden;
 }
 
 
@@ -155,25 +171,28 @@ h2 {
 	border-bottom: 1px solid #c6c6c6;
 }
 
-.pers-info {
-
-}
-
-.pers-info li {
+.profile li {
 	margin: 0 20px 20px 0;
 	float: left;
-
+	width: 45%;
 }
 
 .b-info {
 	float: left;
 	font-size: 16px;
 	border: 1px solid #c6c6c6;
+	width: 100%;
 }
 
 .b-info > div:first-child{
 	border-right: inherit;
 	background-color: #f1f1f1;
+	width: 35%;
+}
+
+.b-info > div:last-child {
+	text-align: center;
+	width: 65%;
 }
 
 .b-info > div {
@@ -269,11 +288,7 @@ ul.duties li {
 	margin: 8px 0;
 }
 
-
 .progress {
-
-#progress {
-
 	background-color: #e6e6e6;
 	height: 20px;
 	position: relative;
@@ -283,18 +298,21 @@ ul.duties li {
 	background-color: #D25B4F;
 	position: absolute;
 	width: 1%;
+	padding-right: 5px;
 	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 14px;
 }
 
 .space {
 	margin: 20px 0;
 }
 
-
 .row:after {
-content:'';
-clear: both;
-display: table;
+	content:'';
+	clear: both;
+	display: table;
 }
 
 .skill {
@@ -302,11 +320,16 @@ display: table;
 	width: 45%;
 }
 
-.skill:nth-child(odd) {
-margin-right: 3%;
+.skill > p:first-child {
+	font-weight: bold;
+	text-align: center;
 }
 
-.row {
+.skill:nth-child(odd) {
+	margin-right: 3%;
+}
+
+.row:after {
 	content: '';
 	clear: both;
 	display: table;
@@ -382,19 +405,16 @@ input[type="submit"] {
 	border:none;
 	text-transform: uppercase;
 	cursor:pointer;
-    // -webkit-transition: all 0.1s;
-    // -moz-transition: all 0.1s;
-    // transition: all 0.1s;
-    box-shadow: 0 4px #ab3c3c;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
   }
 
   input[type="submit"]:hover {
-  	box-shadow: 0 2px #ab3c3c;
-  	top: 2px;
+  	background-color: #C7584D;
   }
 
   input[type="submit"]:active {
-  	box-shadow: 0 0 #ab3c3c;
-  	top: 4px;
+  	box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.3); 
   }
 
