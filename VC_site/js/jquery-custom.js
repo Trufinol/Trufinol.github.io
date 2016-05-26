@@ -22,7 +22,7 @@
         $content.fadeOut(300, function () {
 
             $.ajax({
-                url: "http://localhost:3000/profile.html",
+                url: "https://trufinol.github.io/VCard/Projects/profile.html",
                 success: function (html) {
                     $contwrap.html(html);
                     profAnim();
@@ -36,7 +36,7 @@
 
         $content.fadeOut(300, function () {
             $.ajax({
-                url: "http://localhost:3000/resume.html",
+                url: "https://trufinol.github.io/VCard/Projects/resume.html",
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
@@ -90,7 +90,7 @@
     $('#portfolio').click(function (e) {
         e.preventDefault();
         $.ajax({
-            url: "http://localhost:3000/portfolio.html",
+            url: "https://trufinol.github.io/VCard/Projects/portfolio.html",
             success: function (html) {
                 $contwrap.html(html);
 
@@ -100,7 +100,7 @@
     $('#contacts').click(function (e) {
         e.preventDefault();
         $.ajax({
-            url: "http://localhost:3000/contacts.html",
+            url: "https://trufinol.github.io/VCard/Projects/contacts.html",
             success: function (html) {
                 $contwrap.html(html);
 
