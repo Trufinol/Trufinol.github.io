@@ -435,8 +435,6 @@ input[type="submit"] {
 }
 
 .grid figure img {
-	position: relative;
-	display: block;
 	min-height: 100%;
 	max-width: 100%;
 	opacity: 0.8;
@@ -447,13 +445,6 @@ input[type="submit"] {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-	pointer-events: none;
 }
 
 .grid figure figcaption,
@@ -467,21 +458,14 @@ input[type="submit"] {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
-}
+
 
 .grid figure h2 {
-	word-spacing: -0.15em;
-	font-weight: 300;
+	font-weight: lighter;
 }
 
 .grid figure h2 span {
-	font-weight: 800;
+	font-weight: bold;
 }
 
 .grid figure h2,
@@ -510,6 +494,8 @@ figure.effect-zoe figcaption {
 
 figure.effect-zoe h2 {
 	float: left;
+    position: relative;
+    top: -65px;
 }
 
 figure.effect-zoe p.icon-links a {
@@ -528,7 +514,6 @@ figure.effect-zoe p.description {
 	bottom: 8em;
 	padding: 2em;
 	color: #fff;
-	text-transform: none;
 	font-size: 90%;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s;
@@ -547,18 +532,6 @@ figure.effect-zoe p.icon-links a {
 figure.effect-zoe p.icon-links a span::before {
 	display: inline-block;
 	padding: 8px 10px;
-	font-family: 'feathericons';
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-eye::before {
-	content: '\e000';
-}
-
-.icon-paper-clip::before {
-	content: '\e001';
 }
 
 .icon-heart::before {
