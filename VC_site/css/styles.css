@@ -106,7 +106,6 @@ ul {
         height: 100%;
         border-right: solid 5px #3C3735;
         background: #D25B4F;
-        // #222b2e;
         transition: all .35s ease;
     }
 
@@ -129,7 +128,7 @@ ul {
 
 .cont-wrap {
     padding: 20px 20px 0;
-    overflow-x: hidden;
+    overflow: hidden;
     visibility: hidden;
 }
 
