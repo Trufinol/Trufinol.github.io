@@ -12,9 +12,19 @@
         TweenMax.staggerFrom($('.b-info'), 0.6, { opacity: 0, scale: 0 }, 0.08);
 
     };
+    function barAnimate(id) {
+        
+        idVal = id.data('value');
+        TweenMax.to(id, 1, { width: idVal + '%', ease: Power1.easeIn });
 
+        setInterval(function () {
+            var progr = $('.progress').css('width');
+            var length = id.css('width'),
+            perc = Math.round((parseInt(length) / parseInt(progr)) * 100);
+            id.text(perc + '%');
+        }, 50);
+    }
     setTimeout(profAnim(), 5000);
-
     //hrefs
     $('#profile').click(function (e) {
         e.preventDefault();
@@ -45,30 +55,18 @@
             });
             $(document).ajaxComplete(function () {
 
-                function barAnimate(id) {
-
-                    idVal = id.data('value');
-                    TweenMax.to(id, 1, { width: idVal + '%', ease: Power1.easeIn });
-
-                    setInterval(function () {
-                        var progr = $('.progress').css('width');
-                        var length = id.css('width'),
-                        perc = Math.round((parseInt(length) / parseInt(progr)) * 100);
-                        id.text(perc + '%');
-                    }, 50);
-                }
                 if (window.innerHeight < 800) {
-                $(document).bind('scroll', function (e) {
-                    var scrollOffset = $(document).scrollTop();
-                    var containerOffset = $('#skillbars').offset().top - window.innerHeight;
-                    if (scrollOffset > containerOffset) {
-                        barAnimate($('#bar-1'));
-                        barAnimate($('#bar-2'));
-                        barAnimate($('#bar-3'));
-                        barAnimate($('#bar-4'));
-                        $(document).unbind('scroll');
-                    }
-                });
+                    $(document).bind('scroll', function (e) {
+                        var scrollOffset = $(document).scrollTop();
+                        var containerOffset = $('#skillbars').offset().top - window.innerHeight;
+                        if (scrollOffset > containerOffset) {
+                            barAnimate($('#bar-1'));
+                            barAnimate($('#bar-2'));
+                            barAnimate($('#bar-3'));
+                            barAnimate($('#bar-4'));
+                            $(document).unbind('scroll');
+                        }
+                    });
                 } else {
                     barAnimate($('#bar-1'));
                     barAnimate($('#bar-2'));
@@ -89,23 +87,28 @@
 
     $('#portfolio').click(function (e) {
         e.preventDefault();
-        $.ajax({
-            url: "https://trufinol.github.io/VCard/Projects/portfolio.html",
-            success: function (html) {
-                $contwrap.html(html);
-
-            }
+        $content.fadeOut(300, function () {
+            $.ajax({
+                url: "https://trufinol.github.io/VCard/Projects/portfolio.html",
+                success: function (html) {
+                    $contwrap.html(html);
+                    $content.fadeIn(300);
+                    TweenMax.staggerFrom($('ul.my-portf li'), 0.55, { scale: 0, opacity: 0, ease: Power4.easeInOut }, 0.15);
+                }
+            });
         });
     });
     $('#contacts').click(function (e) {
         e.preventDefault();
-        $.ajax({
-            url: "https://trufinol.github.io/VCard/Projects/contacts.html",
-            success: function (html) {
-                $contwrap.html(html);
+        $content.fadeOut(300, function () {
+            $.ajax({
+                url: "https://trufinol.github.io/VCard/Projects/contacts.html",
+                success: function (html) {
+                    $contwrap.html(html);
+                    $content.fadeIn(300);
 
-            }
+                }
+            });
         });
     });
-
 });
