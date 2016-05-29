@@ -1,8 +1,7 @@
-﻿<div class="portfolio">
-    <h1><span>CONTACTS</span></h1>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8H-dxgnToOc9st1CWu6wJSpEAncxJDJk&callback=initialize"></script>
-    <script>
-
+                <div class="portfolio">
+                    <h1><span>CONTACTS</span></h1>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8H-dxgnToOc9st1CWu6wJSpEAncxJDJk&callback=initialize"></script>
+                    <script>
         function initialize() {
             var myCenter = new google.maps.LatLng(50.400203, 30.378084);
 						var mapProp = {
@@ -17,7 +16,6 @@
 							position:new google.maps.LatLng(50.400047, 30.378187),
 							animation:google.maps.Animation.DROP
 						});
-
 						marker.setMap(map);
 					}
 					google.maps.event.addDomListener(window, 'load', initialize);
@@ -25,25 +23,25 @@
         $('#myform').slideUp('slow');
         $('#myform').prepend('Your submission has been processed...');
     });
-    </script>
-    <div class="space" id="googleMap" style="width: 100%;height: 500px;"></div>
-</div>
-<div class="contact-form">
-    <h2>Send me a message</h2>
-    <div class="step-light"></div>
-    <form id="myform" enctype="text/plain" action="https://docs.google.com/forms/d/1C9QExc7QgALsEWInZbbotof3kVwHxWonFU0hXOs66H0/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
-        <div style="width: 30%;float:left;margin-right: 10px;">
-            <input name="entry.2058202104" id="entry.2058202104" type="text" size="20" placeholder="Name" required>
-            <input name="entry.1490687306" id="entry.1490687306" type="text" size="20" placeholder="Subject" required>
-            <input name="entry.1868643993" id="entry.1868643993" type="email" size="20" placeholder="Email" required>
-        </div>
-        <div style="width: 68%;float:left;">
-            <textarea name="entry.1731484434" id="entry.1731484434" rows="10" cols="50" placeholder="Message ..." required></textarea>
-        </div>
-        <div style="float:right;text-align: right;margin: 10px 0 22px;">
-            <input type="submit" value="Send message">
-        </div>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-    </form>
-</div>
-
+                    </script>
+                    <div class="space" id="googleMap" style="width: 100%;height: 500px;"></div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send me a message</h2>
+                    <div class="step-light"></div>
+                    <form id="myform" enctype="text/plain" action="https://docs.google.com/forms/d/1C9QExc7QgALsEWInZbbotof3kVwHxWonFU0hXOs66H0/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+                        <div style="width: 30%;float:left;margin-right: 10px;">
+                            <input name="entry.2058202104" id="entry.2058202104" type="text" size="20" placeholder="Name" required>
+                            <input name="entry.1490687306" id="entry.1490687306" type="text" size="20" placeholder="Subject" required>
+                            <input name="entry.1868643993" id="entry.1868643993" type="email" size="20" placeholder="Email" required>
+                        </div>
+                        <div style="width: 68%;float:left;">
+                            <textarea name="entry.1731484434" id="entry.1731484434" rows="10" cols="50" placeholder="Message ..." required></textarea>
+                        </div>
+                        <div style="float:right;text-align: right;position:relative; margin: 10px 0 22px;">
+                            <input type="submit" value="Send message">
+                            <div class="success">success<i class="fa fa-check"></i></div>
+                        </div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                    </form>
+                </div>
