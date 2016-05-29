@@ -1,6 +1,6 @@
 ﻿<div class="portfolio">
     <h1><span>CONTACTS</span></h1>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC8H-dxgnToOc9st1CWu6wJSpEAncxJDJk&callback=initialize"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8H-dxgnToOc9st1CWu6wJSpEAncxJDJk&callback=initialize"></script>
     <script>
 
         function initialize() {
@@ -19,11 +19,6 @@
 						});
 
 						marker.setMap(map);
-						var infowindow = new google.maps.InfoWindow({
-							content:"My place is somewhere here ;)"
-						});
-
-						infowindow.open(map,marker);
 					}
 					google.maps.event.addDomListener(window, 'load', initialize);
     </script>
