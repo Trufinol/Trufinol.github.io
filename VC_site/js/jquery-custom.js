@@ -2,7 +2,7 @@
     var $preloader = $('#preloader');
     var $content = $(".content");
     var $contwrap = $('.cont-wrap');
-    $preloader.fadeOut(200);
+    //$preloader.fadeOut(200);
 
     function profAnim() {
         $contwrap.css('visibility', 'visible');
@@ -24,7 +24,8 @@
             id.text(perc + '%');
         }, 50);
     }
-    setTimeout(profAnim(), 5000);
+
+profAnim();
     //hrefs
     $('#profile').click(function (e) {
         e.preventDefault();
@@ -32,10 +33,11 @@
         $content.fadeOut(300, function () {
 
             $.ajax({
-                url: "https://trufinol.github.io/VCard/Projects/profile.html",
+                url: "https://Trufinol.github.io/Projects/profile.html",
                 success: function (html) {
                     $contwrap.html(html);
                     profAnim();
+
                 }
             });
         });
@@ -46,7 +48,7 @@
 
         $content.fadeOut(300, function () {
             $.ajax({
-                url: "https://trufinol.github.io/VCard/Projects/resume.html",
+                url: "https://Trufinol.github.io/Projects/resume.html",
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
@@ -89,7 +91,7 @@
         e.preventDefault();
         $content.fadeOut(300, function () {
             $.ajax({
-                url: "https://trufinol.github.io/VCard/Projects/portfolio.html",
+                url: "https://Trufinol.github.io/Projects/portfolio.html",
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
@@ -102,11 +104,11 @@
         e.preventDefault();
         $content.fadeOut(300, function () {
             $.ajax({
-                url: "https://trufinol.github.io/VCard/Projects/contacts.html",
+                url: "https://Trufinol.github.io/Projects/contacts.html",
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
-
+                    TweenMax.from($('#googleMap'), 0.8, { scale: 0.1, ease: Back.easeOut.config(1) }, 0.5);
                 }
             });
         });

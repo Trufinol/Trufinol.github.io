@@ -259,7 +259,7 @@ footer {
     color: #58B0FD;
 }
 
-.resume li {
+.resume li:not(:last-child) {
     border-bottom: 1px solid #c6c6c6;
 }
 
@@ -278,10 +278,11 @@ span.year {
 
 ul.duties {
     list-style: disc inside;
+    margin-bottom: 20px;
 }
 
     ul.duties li {
-        border: none;
+        border: none !important;
     }
 
 /*----------- SKILLS -----------*/
