@@ -46,14 +46,14 @@ a {
     position: relative;
 }
 
-    .photo img {
-        border-radius: 50%;
-        width: 63%;
-        left: 3.4em;
-        top: 55px;
-        position: absolute;
-        border: 10px solid rgba(0,0,0,.3);
-    }
+.photo img {
+    border-radius: 50%;
+    width: 63%;
+    left: 3.4em;
+    top: 55px;
+    position: absolute;
+    border: 10px solid rgba(0,0,0,.3);
+}
 
 nav {
     background-color: #383838;
@@ -95,27 +95,27 @@ ul {
     transition: .35s ease color;
 }
 
-    .list-hover-slide a:before {
-        content: '';
-        display: block;
-        z-index: -1;
-        position: absolute;
-        left: -102%;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border-right: solid 5px #3C3735;
-        background: #D25B4F;
-        transition: all .35s ease;
-    }
+.list-hover-slide a:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    left: -102%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: solid 5px #3C3735;
+    background: #D25B4F;
+    transition: all .35s ease;
+}
 
-    .list-hover-slide, .list-hover-slide a:hover:before {
-        left: -5px;
-    }
+.list-hover-slide, .list-hover-slide a:hover:before {
+    left: -5px;
+}
 
-        .list-hover-slide a:hover {
-            color: #fefefe;
-        }
+.list-hover-slide a:hover {
+    color: #fefefe;
+}
 
 /*----------- CONTENT -----------*/
 .content {
@@ -145,9 +145,9 @@ h1 {
     margin: 0;
 }
 
-    h1 span {
-        font-weight: bold;
-    }
+h1 span {
+    font-weight: bold;
+}
 
 h2 {
     font-size: 25px;
@@ -174,11 +174,23 @@ h2 {
     padding: 1.3em 0;
     border-bottom: 1px solid #c6c6c6;
 }
+.profile ul{
 
+}
+.profile ul:after {
+    content:"";
+    clear: both;
+    display: table;
+}
 .profile li {
-    margin: 0 20px 20px 0;
+    margin: 0 20px 20px 22px;
     float: left;
     width: 45%;
+}
+
+.profile li:nth-child(even){
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .b-info {
@@ -188,21 +200,21 @@ h2 {
     width: 100%;
 }
 
-    .b-info > div:first-child {
-        border-right: inherit;
-        background-color: #f1f1f1;
-        width: 35%;
-    }
+.b-info > div:first-child {
+    border-right: inherit;
+    background-color: #f1f1f1;
+    width: 35%;
+}
 
-    .b-info > div:last-child {
-        text-align: center;
-        width: 65%;
-    }
+.b-info > div:last-child {
+    text-align: center;
+    width: 65%;
+}
 
-    .b-info > div {
-        float: inherit;
-        padding: 10px;
-    }
+.b-info > div {
+    float: inherit;
+    padding: 10px;
+}
 
 /*----------- FOOTER -----------*/
 
@@ -213,34 +225,34 @@ footer {
     padding: 5px 50px;
 }
 
-    footer p {
-        display: inline-block;
-    }
+footer p {
+    display: inline-block;
+}
 
-        footer p.socials {
-            float: right;
-        }
+footer p.socials {
+    float: right;
+}
 
-    footer a {
-        color: inherit;
-    }
+footer a {
+    color: inherit;
+}
 
-    footer a {
-        letter-spacing: 1.2em;
-        -webkit-transition: color .2s ease-out;
-        -moz-transition: color .2s ease-out;
-        -ms-transition: color .2s ease-out;
-        -o-transition: color .2s ease-out;
-        transition: color .2s ease-out;
-    }
+footer a {
+    letter-spacing: 1.2em;
+    -webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    -ms-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+}
 
-        footer a:last-child {
-            letter-spacing: normal;
-        }
+footer a:last-child {
+    letter-spacing: normal;
+}
 
-        footer a:hover {
-            color: #D25B4F;
-        }
+footer a:hover {
+    color: #D25B4F;
+}
 /*----------- RESUME -----------*/
 
 .resume h1 {
@@ -272,18 +284,18 @@ span.year {
     color: #949494;
 }
 
-    span.year i {
-        margin-right: 8px;
-    }
+span.year i {
+    margin-right: 8px;
+}
 
 ul.duties {
     list-style: disc inside;
     margin-bottom: 20px;
 }
 
-    ul.duties li {
-        border: none !important;
-    }
+ul.duties li {
+    border: none !important;
+}
 
 /*----------- SKILLS -----------*/
 
@@ -327,14 +339,14 @@ ul.duties {
     width: 45%;
 }
 
-    .skill > p:first-child {
-        font-weight: bold;
-        text-align: center;
-    }
+.skill > p:first-child {
+    font-weight: bold;
+    text-align: center;
+}
 
-    .skill:nth-child(odd) {
-        margin-right: 3%;
-    }
+.skill:nth-child(odd) {
+    margin-right: 3%;
+}
 
 .row:after {
     content: '';
@@ -365,55 +377,55 @@ ul.duties {
     flex-flow: row wrap;
 }
 
-    .my-portf li {
-        margin-bottom: 20px;
-        width: 45%;
-        overflow: hidden;
-        position: relative;
-        height: 290px;
-    }
+.my-portf li {
+    margin-bottom: 20px;
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+    height: 290px;
+}
 
-    .my-portf img {
-        width: 100%;
-        transition: transform .3s ease-out;
-    }
+.my-portf img {
+    width: 100%;
+    transition: transform .3s ease-out;
+}
 
-    .my-portf i {
-        float: right;
-    }
+.my-portf i {
+    float: right;
+}
 
-    .my-portf div {
-        position: absolute;
-        left: 0;
-        height: 73px;
-        bottom: -73px;
-        background-color: #D25B4F;
-        padding: 25px 30px 15px 15px;
-        -moz-transition: bottom .3s ease-out;
-        -o-transition: bottom .3s ease-out;
-        -webkit-transition: bottom .3s ease-out;
-        transition: bottom .3s ease-out;
-        width: 100%;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #fefefe;
-    }
+.my-portf div {
+    position: absolute;
+    left: 0;
+    height: 73px;
+    bottom: -73px;
+    background-color: #D25B4F;
+    padding: 25px 30px 15px 15px;
+    -moz-transition: bottom .3s ease-out;
+    -o-transition: bottom .3s ease-out;
+    -webkit-transition: bottom .3s ease-out;
+    transition: bottom .3s ease-out;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fefefe;
+}
 
-    .my-portf a {
-        color: #fefefe;
-    }
+.my-portf a {
+    color: #fefefe;
+}
 
-    .my-portf li:hover div {
-        bottom: 0;
-    }
+.my-portf li:hover div {
+    bottom: 0;
+}
 
-    .my-portf li:hover img {
-        -moz-transform: translateY(-70px);
-        -ms-transform: translateY(-70px);
-        -o-transform: translateY(-70px);
-        -webkit-transform: translateY(-70px);
-        transform: translateY(-70px);
-    }
+.my-portf li:hover img {
+    -moz-transform: translateY(-70px);
+    -ms-transform: translateY(-70px);
+    -o-transform: translateY(-70px);
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+}
 /*----------- CONTACTS -----------*/
 
 input, textarea {
@@ -422,20 +434,20 @@ input, textarea {
     font-family: 'Lato', sans-serif;
 }
 
-    input[type="text"], input[type="email"], textarea {
-        margin: 10px 0;
-        padding: 15px 10px;
-        border: 2px solid #e6e6e6;
-        border-radius: 3px;
-        -moz-transition: box-shadow .2s ease-in, border .2s ease-in;
-        -o-transition: box-shadow .2s ease-in, border .2s ease-in;
-        -webkit-transition: box-shadow .2s ease-in, border .2s ease-in;
-        transition: box-shadow .2s ease-in, border .2s ease-in;
-    }
+input[type="text"], input[type="email"], textarea {
+    margin: 10px 0;
+    padding: 15px 10px;
+    border: 2px solid #e6e6e6;
+    border-radius: 3px;
+    -moz-transition: box-shadow .2s ease-in, border .2s ease-in;
+    -o-transition: box-shadow .2s ease-in, border .2s ease-in;
+    -webkit-transition: box-shadow .2s ease-in, border .2s ease-in;
+    transition: box-shadow .2s ease-in, border .2s ease-in;
+}
 
-        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-            border-color: #F16455;
-        }
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #F16455;
+}
 
 :focus::-webkit-input-placeholder {
     -moz-transition: all .3s ease-in;
@@ -489,13 +501,13 @@ input[type="submit"] {
     transition: all 0.1s;
 }
 
-    input[type="submit"]:hover {
-        background-color: #C7584D;
-    }
+input[type="submit"]:hover {
+    background-color: #C7584D;
+}
 
-    input[type="submit"]:active {
-        box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.3);
-    }
+input[type="submit"]:active {
+    box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.3);
+}
 
 .success {
     text-transform: uppercase;
@@ -510,6 +522,6 @@ input[type="submit"] {
     display: none;
 }
 
-    .success i {
-        margin-left: 12px;
-    }
+.success i {
+    margin-left: 12px;
+}

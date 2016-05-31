@@ -2,6 +2,7 @@
     var $preloader = $('#preloader');
     var $content = $(".content");
     var $contwrap = $('.cont-wrap');
+
     //$preloader.fadeOut(200);
 
     function profAnim() {
@@ -13,7 +14,7 @@
 
     };
     function barAnimate(id) {
-        
+
         idVal = id.data('value');
         TweenMax.to(id, 1, { width: idVal + '%', ease: Power1.easeIn });
 
@@ -25,7 +26,7 @@
         }, 50);
     }
 
-profAnim();
+    profAnim();
     //hrefs
     $('#profile').click(function (e) {
         e.preventDefault();
@@ -52,38 +53,35 @@ profAnim();
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
+                },
+                complete: function () {
+                    if (window.innerHeight < 800) {
+                        $(document).bind('scroll', function (e) {
+                            var scrollOffset = $(document).scrollTop();
+                            var containerOffset = $('#skillbars').offset().top - window.innerHeight;
+                            if (scrollOffset > containerOffset) {
+                                barAnimate($('#bar-1'));
+                                barAnimate($('#bar-2'));
+                                barAnimate($('#bar-3'));
+                                barAnimate($('#bar-4'));
+                                $(document).unbind('scroll');
+                            }
+                        });
+                    } else {
+                        barAnimate($('#bar-1'));
+                        barAnimate($('#bar-2'));
+                        barAnimate($('#bar-3'));
+                        barAnimate($('#bar-4'));
+                    }
 
+                    function educAnimate(id) {
+
+                        TweenMax.fromTo(id, 0.5, { x: -800 }, { x: 0, ease: Sine.easeOut }, 0.3);
+
+                    }
+                    educAnimate($('.topic, h2'));
                 }
             });
-            $(document).ajaxComplete(function () {
-
-                if (window.innerHeight < 800) {
-                    $(document).bind('scroll', function (e) {
-                        var scrollOffset = $(document).scrollTop();
-                        var containerOffset = $('#skillbars').offset().top - window.innerHeight;
-                        if (scrollOffset > containerOffset) {
-                            barAnimate($('#bar-1'));
-                            barAnimate($('#bar-2'));
-                            barAnimate($('#bar-3'));
-                            barAnimate($('#bar-4'));
-                            $(document).unbind('scroll');
-                        }
-                    });
-                } else {
-                    barAnimate($('#bar-1'));
-                    barAnimate($('#bar-2'));
-                    barAnimate($('#bar-3'));
-                    barAnimate($('#bar-4'));
-                }
-
-                function educAnimate(id) {
-
-                    TweenMax.fromTo(id, 0.5, { x: -800 }, { x: 0, ease: Sine.easeOut }, 0.3);
-
-                }
-                educAnimate($('.topic, h2'));
-            });
-
         });
     });
 
@@ -108,9 +106,27 @@ profAnim();
                 success: function (html) {
                     $contwrap.html(html);
                     $content.fadeIn(300);
-                    TweenMax.from($('#googleMap'), 0.8, { scale: 0.1, ease: Back.easeOut.config(1) }, 0.5);
-                }
-            });
+                },
+                complete: function() {
+                    var myCenter = new google.maps.LatLng(50.400203, 30.378084);
+                    var mapProp = {
+                        center: new google.maps.LatLng(50.407531, 30.363708),
+                        zoom: 13,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        disableDefaultUI: true
+                    };
+                    var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    var marker=new google.maps.Marker({
+                        icon:'images/marker.png',
+                        position:new google.maps.LatLng(50.400047, 30.378187),
+                        animation:google.maps.Animation.DROP
+                    });
+                    marker.setMap(map);
+                                   
+                                }
+
+                            });
         });
     });
 });
+
