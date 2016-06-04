@@ -28,6 +28,12 @@
 
     profAnim();
     //hrefs
+
+    $('.menu a').click(function () {
+        $('.menu a').removeClass('active');
+        $(this).addClass('active');
+    });
+
     $('#profile').click(function (e) {
         e.preventDefault();
 
