@@ -26,6 +26,7 @@
             <script>
              $('#myform').on('submit', function (e) {
                 $('#myform').slideUp('slow');
-                $('#myform').prepend('Your submission has been processed...').slideDown('slow');
+                $('#myform').append('Your submission has been processed...');
+                 $('#myform').slideDown();
                 
             });</script>
