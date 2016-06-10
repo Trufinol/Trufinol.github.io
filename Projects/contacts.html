@@ -25,8 +25,11 @@
             </div>
             <script>
              $('#myform').on('submit', function (e) {
-                $('#myform').slideUp('slow');
-                $('#myform').append('Your submission has been processed...');
-                 $('#myform').slideDown();
+             //   $('#myform').slideUp('slow');
+                 $('.input[submit]').hide();
+                 
+                $('.success').show();
+             // $('#myform').append('Your submission has been processed...');
+             //    $('#myform').slideDown();
                 
             });</script>
