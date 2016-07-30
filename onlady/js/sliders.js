@@ -41,8 +41,8 @@ window.onload = function () {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
-    nextButton: '.sec2-swiper__prev',
-    prevButton: '.sec2-swiper__next'
+    nextButton: '.sec2-swiper__next',
+    prevButton: '.sec2-swiper__prev'
   });
 
 };
