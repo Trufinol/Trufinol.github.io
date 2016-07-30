@@ -11,8 +11,8 @@ window.onload = function () {
     loop: true,
     slidesPerView: 6,
     spaceBetween: 30,
-    nextButton: '.m-swiper__prev',
-    prevButton: '.m-swiper__next',
+    nextButton: '.m-swiper__next',
+    prevButton: '.m-swiper__prev',
     breakpoints: {
             1200: {
                 slidesPerView: 5,
@@ -33,8 +33,8 @@ window.onload = function () {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
-    nextButton: '.sec1-swiper__prev',
-    prevButton: '.sec1-swiper__next'
+    nextButton: '.sec1-swiper__next',
+    prevButton: '.sec1-swiper__prev'
   });
 
   var secondary2Swiper = new Swiper('.sec2-swiper-container', {
