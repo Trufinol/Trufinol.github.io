@@ -25,6 +25,13 @@ window.onload = function () {
             770: {
                 slidesPerView: 3,
                 spaceBetween: 20
+            },
+            560: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            400: {
+                slidesPerView: 1
             }
           }
   });
@@ -34,7 +41,17 @@ window.onload = function () {
     slidesPerView: 3,
     spaceBetween: 30,
     nextButton: '.sec1-swiper__next',
-    prevButton: '.sec1-swiper__prev'
+    prevButton: '.sec1-swiper__prev',
+    breakpoints: {
+            580: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            }
+          }
   });
 
   var secondary2Swiper = new Swiper('.sec2-swiper-container', {
@@ -42,7 +59,18 @@ window.onload = function () {
     slidesPerView: 3,
     spaceBetween: 30,
     nextButton: '.sec2-swiper__next',
-    prevButton: '.sec2-swiper__prev'
+    prevButton: '.sec2-swiper__prev',
+    breakpoints: {
+            580: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            }
+          },
+
   });
 
 };
