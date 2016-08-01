@@ -418,8 +418,11 @@ li {
 .m-swiper-container .swiper-nav__list__item {
   position: relative;
   display: inline-block;
-  margin-right: 35px;
   padding: 5px 0;
+}
+
+.m-swiper-container .swiper-nav__list__item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .m-swiper-container .swiper-nav__list__item:before {
