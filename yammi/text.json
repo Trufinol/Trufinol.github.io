@@ -1,0 +1,81 @@
+{
+    "carousel": [
+        {"imageName": "slide-1.jpg"},
+        {"imageName": "slide-2.jpg"},
+        {"imageName": "slide-3.jpg"},
+        {"imageName": "slide-4.jpg"}
+    ],
+    "carouselText": "Выбирай, покупай, носи!",
+    "headlineText": "Yammi – самые крутые и веселые рюкзаки. Живите ярко вместе с Yammi J",
+    "bigBackpackHeader": "Большие рюкзаки",
+    "bigBackpack": [
+        {
+            "image": [
+                {"src": "red-1.jpg"},
+                {"src": "red-2.jpg"}
+            ],
+            "name": "Большой красный рюкзак",
+            "size" : "48 x 35 x 18 (см)",
+            "material": "Полиспандекс",
+            "price": "1299 грн."
+        },
+        {
+            "image": [
+                {"src": "blue-1.jpg"},
+                {"src": "blue-2.jpg"}
+            ],
+            "name": "Большой синий рюкзак",
+            "size" : "48 x 35 x 18 (см)",
+            "material": "Полиспандекс",
+            "price": "1299 грн."
+        },
+        {
+            "image": [
+                {"src": "black-1.jpg"},
+                {"src": "black-2.jpg"}
+            ],
+            "name": "Большой черный рюкзак",
+            "size" : "48 x 35 x 18 (см)",
+            "material": "Полиспандекс",
+            "price": "1299 грн."
+        }
+    ],
+    "smallBackpackHeader": "Маленькие рюкзаки",
+    "smallBackpack": [
+        {
+            "image": [
+                {"src": "red-1.jpg"},
+                {"src": "red-2.jpg"}
+            ],
+            "name": "Маленький красный рюкзак",
+            "size" : "30 x 23 x 12 (см)",
+            "material": "Полиспандекс",
+            "price": "799 грн."
+        },
+        {
+            "image": [
+                {"src": "blue-1.jpg"},
+                {"src": "blue-2.jpg"}
+            ],
+            "name": "Маленький синий <br /> рюкзак",
+            "size" : "30 x 23 x 12 (см)",
+            "material": "Полиспандекс",
+            "price": "799 грн."
+        },
+        {
+            "image": [
+                {"src": "black-1.jpg"},
+                {"src": "black-2.jpg"}
+            ],
+            "name": "Маленький черный рюкзак",
+            "size" : "30 x 23 x 12 (см)",
+            "material": "Полиспандекс",
+            "price": "799 грн."
+        }
+    ],
+    "footerText": "Рюкзаки Yammi изготовлены из высококачественного материала - 100% полиспандекса. Этот материал яркий, прочный и легко чистится. Его очень сложно повредить. Полиспандекс не выгорает, устойчив к стиранию и повреждениям.",
+    "tel": "+38 (067) 404 7578",
+    "email": "order@yammi.com.ua",
+    "facebook": "/",
+    "insta": "/"
+}
