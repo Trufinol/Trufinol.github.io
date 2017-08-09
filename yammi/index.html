@@ -64,13 +64,15 @@
     <script id="template" type="text/x-handlebars-template">
         <div class="uk-container">
             <!-- SLIDER -->
-            <div class="uk-inline">
-                <div class="main-slider">
-                    {{#carousel}}
-                    <div class="slider-item uk-inline uk-text-center">
-                        <img src="img/{{imageName}}" alt="">
+            <div class="uk-flex uk-position-relative">
+                <div style="width: 100%;max-width: 800px;margin: 0 auto">
+                    <div class="main-slider">
+                        {{#carousel}}
+                        <div class="slider-item uk-inline uk-text-center">
+                            <img src="img/{{imageName}}" alt="">
+                        </div>
+                        {{/carousel}}
                     </div>
-                    {{/carousel}}
                 </div>
                 <div class="uk-overlay uk-overlay-default uk-position-bottom">
                     <p class="uk-text-center uk-text-large text-primary">{{carouselText}}</p>
@@ -87,13 +89,23 @@
                     <div class="uk-card uk-card-default _checkout-item">
                         <div class="uk-card-media-top">
                             <div class="item-slider owl-theme">
-                                {{#image}}
+                                {{#if_eq image.length 1}} {{#image}}
                                 <div class="item" uk-lightbox>
                                     <a href="img/{{src}}">
                                         <img class="_item-pic" src="img/{{src}}" alt="">
                                     </a>
                                 </div>
-                                {{/image}}
+                                {{/image}} {{else}}
+                                <div class="item-slider">
+                                    {{#image}}
+                                    <div class="item" uk-lightbox>
+                                        <a href="img/{{src}}">
+                                            <img class="_item-pic" src="img/{{src}}" alt="">
+                                        </a>
+                                    </div>
+                                    {{/image}}
+                                </div>
+                                {{/if_eq}}
                             </div>
                         </div>
                         <div class="uk-card-body">
@@ -128,7 +140,14 @@
                 <div>
                     <div class="uk-card uk-card-default _checkout-item">
                         <div class="uk-card-media-top">
-                            <div class="item-slider owl-theme">
+                            {{#if_eq image.length 1}} {{#image}}
+                            <div class="item" uk-lightbox>
+                                <a href="img/{{src}}">
+                                    <img class="_item-pic" src="img/{{src}}" alt="">
+                                </a>
+                            </div>
+                            {{/image}} {{else}}
+                            <div class="item-slider">
                                 {{#image}}
                                 <div class="item" uk-lightbox>
                                     <a href="img/{{src}}">
@@ -137,6 +156,7 @@
                                 </div>
                                 {{/image}}
                             </div>
+                            {{/if_eq}}
                         </div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title uk-text-center _item-name">{{{name}}}</h3>
