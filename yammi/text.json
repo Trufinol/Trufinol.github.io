@@ -1,74 +1,66 @@
 {
     "carousel": [
-        {"imageName": "slide-1.jpg"},
-        {"imageName": "slide-2.jpg"},
-        {"imageName": "slide-3.jpg"},
-        {"imageName": "slide-4.jpg"}
+        { "imageName": "slide-1.jpg" },
+        { "imageName": "slide-2.jpg" },
+        { "imageName": "slide-3.jpg" },
+        { "imageName": "slide-4.jpg" }
     ],
-    "carouselText": "Выбирай, покупай, носи c удовольствием!",
-    "headlineText": "Yammi – самые крутые и веселые рюкзаки. Живите ярко вместе с Yammi J",
+    "carouselText": "Выбирай, покупай, носи!",
+    "headlineText": "Yammi – самые крутые и веселые рюкзаки. Живите ярко вместе с Yammi!",
     "bigBackpackHeader": "Большие рюкзаки",
-    "bigBackpack": [
-        {
+    "bigBackpack": [{
             "image": [
-                {"src": "red-1.jpg"},
-                {"src": "red-2.jpg"}
+                { "src": "red-1.jpg" }
             ],
-            "name": "Большой красный рюкзак",
-            "size" : "48 x 35 x 18 (см)",
+            "name": "Большой розовый рюкзак",
+            "size": "48 x 35 x 18 (см)",
             "material": "Полиспандекс",
             "price": "1299 грн."
         },
         {
             "image": [
-                {"src": "blue-1.jpg"},
-                {"src": "blue-2.jpg"}
+                { "src": "blue-1.jpg" }
             ],
             "name": "Большой синий рюкзак",
-            "size" : "48 x 35 x 18 (см)",
+            "size": "48 x 35 x 18 (см)",
             "material": "Полиспандекс",
             "price": "1299 грн."
         },
         {
             "image": [
-                {"src": "black-1.jpg"},
-                {"src": "black-2.jpg"}
+                { "src": "black-1.jpg" }
             ],
             "name": "Большой черный рюкзак",
-            "size" : "48 x 35 x 18 (см)",
+            "size": "48 x 35 x 18 (см)",
             "material": "Полиспандекс",
             "price": "1299 грн."
         }
     ],
     "smallBackpackHeader": "Маленькие рюкзаки",
-    "smallBackpack": [
-        {
+    "smallBackpack": [{
             "image": [
-                {"src": "red-1.jpg"},
-                {"src": "red-2.jpg"}
+                { "src": "red-2.jpg" }
             ],
-            "name": "Маленький красный рюкзак",
-            "size" : "30 x 23 x 12 (см)",
+            "name": "Маленький розовый рюкзак",
+            "size": "30 x 23 x 12 (см)",
             "material": "Полиспандекс",
             "price": "799 грн."
         },
         {
             "image": [
-                {"src": "blue-1.jpg"},
-                {"src": "blue-2.jpg"}
+                { "src": "blue-2.jpg" }
             ],
             "name": "Маленький синий <br /> рюкзак",
-            "size" : "30 x 23 x 12 (см)",
+            "size": "30 x 23 x 12 (см)",
             "material": "Полиспандекс",
             "price": "799 грн."
         },
         {
             "image": [
-                {"src": "black-1.jpg"},
-                {"src": "black-2.jpg"}
+                { "src": "black-2.jpg" }
             ],
             "name": "Маленький черный рюкзак",
-            "size" : "30 x 23 x 12 (см)",
+            "size": "30 x 23 x 12 (см)",
             "material": "Полиспандекс",
             "price": "799 грн."
         }
