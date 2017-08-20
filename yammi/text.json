@@ -10,7 +10,8 @@
     "bigBackpackHeader": "Большие рюкзаки",
     "bigBackpack": [{
             "image": [
-                { "src": "red-1.jpg" }
+                { id: "red",  "src": "red-1.jpg" },
+                { id: "red", "src": "red-2.jpg" }
             ],
             "name": "Большой розовый рюкзак",
             "size": "48 x 35 x 18 (см)",
