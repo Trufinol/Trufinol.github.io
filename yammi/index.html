@@ -90,7 +90,7 @@
                         <div class="uk-card-media-top">
                             <div class="item-slider owl-theme">
                                 {{#if_eq image.length 1}} {{#image}}
-                                <div class="item" uk-lightbox="{group: group{{id}} }">
+                                <div class="item" uk-lightbox>
                                     <a href="img/{{src}}">
                                         <img class="_item-pic" src="img/{{src}}" alt="">
                                     </a>
@@ -98,7 +98,7 @@
                                 {{/image}} {{else}}
                                 <div class="item-slider">
                                     {{#image}}
-                                    <div class="item" uk-lightbox>
+                                    <div class="item"  uk-lightbox="{group: group-{{id}} }">
                                         <a href="img/{{src}}">
                                             <img class="_item-pic" src="img/{{src}}" alt="">
                                         </a>
