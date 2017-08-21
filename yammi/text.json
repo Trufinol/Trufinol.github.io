@@ -20,7 +20,8 @@
         },
         {
             "image": [
-                { "src": "blue-1.jpg" }
+                { "src": "blue-1.jpg" },
+                { "src": "blue-2.jpg" }
             ],
             "name": "Большой синий рюкзак",
             "size": "48 x 35 x 18 (см)",
@@ -29,7 +30,8 @@
         },
         {
             "image": [
-                { "src": "black-1.jpg" }
+                { "src": "black-1.jpg" },
+                { "src": "black-2.jpg" }
             ],
             "name": "Большой черный рюкзак",
             "size": "48 x 35 x 18 (см)",
