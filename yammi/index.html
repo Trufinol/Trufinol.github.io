@@ -96,9 +96,9 @@
                                     </a>
                                 </div>
                                 {{/image}} {{else}}
-                                <div class="item-slider">
+                                <div class="item-slider" uk-lightbox="animation: fade">
                                     {{#image}}
-                                    <div class="item"  uk-lightbox="{group: group-{{id}} }">
+                                    <div class="item">
                                         <a href="img/{{src}}">
                                             <img class="_item-pic" src="img/{{src}}" alt="">
                                         </a>
